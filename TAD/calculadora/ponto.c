@@ -3,7 +3,7 @@
 
 #include "ponto.h"
 
-typedef struct ponto{
+struct ponto{
     int x, y;
 };
 Ponto* criarPonto(int x, int y){
