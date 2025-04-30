@@ -2,6 +2,7 @@
 #define PONTO_H
 
 typedef struct ponto Ponto;
+
 Ponto* criarPonto(int x, int y);
 void printPonto(Ponto *p);
 
