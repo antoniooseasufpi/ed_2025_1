@@ -20,12 +20,34 @@ No *inserirElementoInicio(No* lista){
 }
 //funcao para inserir os dados no final da lista
 No *inserirElementoFinal(No* lista){
-
+    return lista;
 }
 // funcao para inserir os dados ordenados (crescente) na lista
 No *inserirElementoOrdenado(No* lista){
-
+    return lista;
 }
+
+No *removerElemento(No* lista, int valor){
+    No *aux = lista;
+    No *ant = NULL;
+    while (aux != NULL && aux->info != valor)
+    {
+        ant = aux;
+        aux = aux->prox;
+    }
+    if (aux == NULL)
+    {
+        printf("Elemento nao encontrado\n");
+        return lista;
+    }
+    if (ant == NULL)
+        lista = aux->prox;
+    else
+        ant->prox = aux->prox;
+    free(aux);
+    return lista;
+}
+
 void mostrarLista(No *lista){
     if (!lista){
         printf("Lista vazia");
